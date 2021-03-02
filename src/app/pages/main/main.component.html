@@ -1,0 +1,15 @@
+<div class="backgroung-page">
+    <div class="container">
+        <h2>GENERADOR DE QR</h2>
+        <div class="input-group mb-3">
+            <input [(ngModel)]="qrToCreate" type="text" class="form-control" placeholder="https://www.instagram.com/generaci.on/" aria-label="Recipient's username"
+                aria-describedby="button-addon2">
+            <button (click)="createQR()" class="btn btn-outline-primary" type="button" id="button-addon2">Generar QR</button>
+        </div>
+        <div class="qrcode-container">
+            <qrcode #qrcode elementType="img" [qrdata]="myAngularxQrCode" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+        </div>
+
+    </div>
+</div>
+
